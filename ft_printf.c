@@ -6,7 +6,7 @@
 /*   By: llaakson <llaakson@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 13:04:39 by llaakson          #+#    #+#             */
-/*   Updated: 2024/06/12 21:26:31 by llaakson         ###   ########.fr       */
+/*   Updated: 2024/06/03 15:17:52 by llaakson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_format(int *ptr, va_list arguments, const char *format)
 	else if (*format == '%')
 		ft_putchar(ptr, '%');
 	else if (*format == 'p')
-		ft_address_count(ptr, va_arg(arguments, unsigned long long));
+		ft_address_affix(ptr, va_arg(arguments, unsigned long long));
 	else if (*format == 'X' || *format == 'x')
 		ft_hexadecimal(ptr, va_arg(arguments, unsigned int), format);
 	else if (*format == 'u')
